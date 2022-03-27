@@ -16,4 +16,15 @@ class ComicController extends Controller
         $comic = Comic::all();
         return ($comic);
     }
+
+    /**
+     * Manda a llamar el modelo de Comic y busca un comic en especifico mediante ID
+     * 
+     * @param  int  $id
+     * @return Array
+     */
+    public function showOne($id){
+        $comic = Comic::find($id);
+        return ($comic);
+    }
 }

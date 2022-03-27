@@ -8,9 +8,8 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="breadcrumb__links">
-                        <a href="./index.html"><i class="fa fa-home"></i> Home</a>
-                        <a href="./categories.html">Categories</a>
-                        <span>{{$titulo}}</span>
+                        <a href="{{route('index')}}"><i class="fa fa-home"></i> Home</a>
+                        <a href="#">{{$titulo}}</a>
                     </div>
                 </div>
             </div>
@@ -40,7 +39,11 @@
                                     <div class="product__item__pic set-bg" data-setbg="{{$contenido->imagen}}">
                                     </div>
                                     <div class="product__item__text">
-                                        <h5><a href="{{route('details', $contenido->id)}}">{{$contenido->nombre}}</a></h5>
+                                        @if ($contenido->bando)
+                                            <h5><a href="{{route('detallePersonaje', $contenido->id)}}">{{$contenido->nombre}}</a></h5>
+                                        @else
+                                            <h5><a href="{{route('detalleComic', $contenido->id)}}">{{$contenido->nombre}}</a></h5>
+                                        @endif
                                     </div>
                                 </div>
                             </div>

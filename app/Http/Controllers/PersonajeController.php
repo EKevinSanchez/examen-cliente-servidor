@@ -16,4 +16,15 @@ class PersonajeController extends Controller
         $personajes = Personaje::all();
         return ($personajes);
     }
+
+    /**
+     * Manda a llamar el modelo de Personaje y busca un personaje en especifico mediante ID
+     * 
+     * @param  int  $id
+     * @return Array
+     */
+    public function showOne($id){
+        $personaje = Personaje::find($id);
+        return ($personaje);
+    }
 }

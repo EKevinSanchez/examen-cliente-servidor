@@ -65,4 +65,6 @@ Route::get('/login', [ViewsController::class, 'login'])->name('login');
 Route::get('/signup', [ViewsController::class, 'signup'])->name('signup');
 
 
-Route::get('/details', [ViewsController::class, 'details'])->name('details');
+Route::get('/detalle-comic/{id}', [ViewsController::class, 'detalleComic'])->name('detalleComic');
+
+Route::get('/detalle-personaje/{id}', [ViewsController::class, 'detallePersonaje'])->name('detallePersonaje');

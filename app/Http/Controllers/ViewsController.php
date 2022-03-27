@@ -63,7 +63,19 @@ class ViewsController extends Controller
         return view('signup');
     }
 
-    public function details(){
-        return view('anime-details');
+    public function detalleComic($id){
+        $comics = new ComicController();
+        $comic = $comics->showOne($id);
+        $titulo = "Comics";
+
+        return view('anime-details',['datos' => $comic, 'titulo' => $titulo]);
+    }
+
+    public function detallePersonaje($id){
+        $personajes = new PersonajeController();
+        $personaje = $personajes->showOne($id);
+        $titulo = "Personajes";
+
+        return view('anime-details',['datos' => $personaje, 'titulo' => $titulo]);
     }
 }

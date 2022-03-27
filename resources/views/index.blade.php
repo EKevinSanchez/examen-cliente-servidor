@@ -73,7 +73,7 @@
                                             <ul>
                                                 <li>{{$personaje->bando}}</li>
                                             </ul>
-                                            <h5><a href="{{route('details', $personaje->id)}}">{{$personaje->nombre}}</a></h5>
+                                            <h5><a href="{{route('detallePersonaje', $personaje->id)}}">{{$personaje->nombre}}</a></h5>
                                         </div>
                                     </div>
                                 </div>
@@ -92,7 +92,7 @@
                             </div>
                             <div class="col-lg-4 col-md-4 col-sm-4">
                                 <div class="btn__all">
-                                    <a href="#" class="primary-btn">View All <span class="arrow_right"></span></a>
+                                    <a href="{{route('comics')}}" class="primary-btn">Ver Todos <span class="arrow_right"></span></a>
                                 </div>
                             </div>
                         </div>
@@ -103,7 +103,7 @@
                                     <div class="product__item__pic set-bg" data-setbg="{{$comic->imagen}}">
                                     </div>
                                     <div class="product__item__text">
-                                        <h5><a href="#">{{$comic->nombre}}</a></h5>
+                                        <h5><a href="{{route('detalleComic', $comic->id)}}">{{$comic->nombre}}</a></h5>
                                     </div>
                                 </div>
                             </div>
