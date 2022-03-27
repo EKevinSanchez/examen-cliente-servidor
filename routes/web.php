@@ -15,3 +15,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [ViewsController::class, 'index'])->name('index');
+Route::get('/comics', [ViewsController::class, 'comics'])->name('comics');
+Route::get('/personajes', [ViewsController::class, 'personajes'])->name('personajes');
+Route::get('/login', [ViewsController::class, 'login'])->name('login');
+Route::get('/signup', [ViewsController::class, 'signup'])->name('signup');
+Route::get('/details', [ViewsController::class, 'details'])->name('details');

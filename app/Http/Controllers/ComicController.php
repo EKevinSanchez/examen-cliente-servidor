@@ -7,7 +7,11 @@ use Illuminate\Http\Request;
 
 class ComicController extends Controller
 {
-    //mandar a llamar el modelo comic
+    /**
+     * Manda a llamar el modelo de Comic y retorna todos los comics
+     *
+     * @return Array
+     */
     public function show(){
         $comic = Comic::all();
         return ($comic);

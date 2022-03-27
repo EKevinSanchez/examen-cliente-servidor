@@ -25,12 +25,13 @@ class PersonajeSeed extends Seeder
                         'Es una super villana la cual fue prisionera de Mojo por varios años, donde se convirtió en tutora de las creaciones de Mojo. Tiene las habilidades de teletransportación, Metamorfosis y superfuerza.',
                         'Es el clon femenino de Fantomex, por lo que fue el resultado del Programa Arma Plus de experimentación con híbridos tecnológico-humanos. Nació y fue "evolucionado" artificialmente en El Mundo, un entorno creado por el hombre para crear supersoldados con tecnología centinela.'];
         $imagenes = ['img/hero/psylocke.jpg', 'img/hero/deadpool.jpg', 'img/hero/fantomex.jpg', 'img/hero/arcangel.jpg', 'img/hero/tormenta.jpg', 'img/hero/puck.webp', 'img/hero/espiral.jpg', 'img/hero/cluster.webp'];
-
+        $bandos = ['Heroe','Antiheroe','Antiheroe','Heroe','Heroe','Antiheroe','Villano','Antiheroe'];
         foreach ($nombres as $key => $nombre) {
             $Personaje = new Personaje();
             $Personaje->nombre = $nombre;
             $Personaje->descripcion = $descripciones[$key];
             $Personaje->imagen = $imagenes[$key];
+            $Personaje->bando = $bandos[$key];
             $Personaje->save();
         }
     
