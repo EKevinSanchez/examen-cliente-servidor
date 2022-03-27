@@ -14,9 +14,55 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+/*
+/--------------------------------------------------------------------------
+| Route /
+|--------------------------------------------------------------------------
+|
+| This route is used to show the index page
+|
+*/
 Route::get('/', [ViewsController::class, 'index'])->name('index');
+
+/*
+/--------------------------------------------------------------------------
+| Route /comics
+|--------------------------------------------------------------------------
+|
+| This route is used to show the about comics page
+|
+*/
 Route::get('/comics', [ViewsController::class, 'comics'])->name('comics');
+
+/*
+|--------------------------------------------------------------------------
+| Route /personajes
+|--------------------------------------------------------------------------
+|
+| This route is used to show the about personajes page
+|
+*/
 Route::get('/personajes', [ViewsController::class, 'personajes'])->name('personajes');
+
+/*
+|--------------------------------------------------------------------------
+| Route /login
+|--------------------------------------------------------------------------
+|
+| This route is used to show the login page
+|
+*/
 Route::get('/login', [ViewsController::class, 'login'])->name('login');
+
+/*
+|--------------------------------------------------------------------------
+| Route /signup
+|--------------------------------------------------------------------------
+|
+| This route is used to show the register page
+|
+*/
 Route::get('/signup', [ViewsController::class, 'signup'])->name('signup');
+
+
 Route::get('/details', [ViewsController::class, 'details'])->name('details');

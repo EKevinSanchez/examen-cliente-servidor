@@ -59,7 +59,7 @@
                             </div>
                             <div class="col-lg-4 col-md-4 col-sm-4">
                                 <div class="btn__all">
-                                    <a href="#" class="primary-btn">Ver Todos <span class="arrow_right"></span></a>
+                                    <a href="{{route('personajes')}}" class="primary-btn">Ver Todos <span class="arrow_right"></span></a>
                                 </div>
                             </div>
                         </div>
@@ -73,7 +73,7 @@
                                             <ul>
                                                 <li>{{$personaje->bando}}</li>
                                             </ul>
-                                            <h5><a href="#">{{$personaje->nombre}}</a></h5>
+                                            <h5><a href="{{route('details', $personaje->id)}}">{{$personaje->nombre}}</a></h5>
                                         </div>
                                     </div>
                                 </div>

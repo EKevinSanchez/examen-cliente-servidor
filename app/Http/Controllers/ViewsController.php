@@ -21,6 +21,11 @@ class ViewsController extends Controller
         return view('index' ,['comics' => $comics, 'personajes' => $personaje->show()]);
     }
 
+    /**
+     * used to show the about comics page
+     *
+     * @return View
+     */
     public function comics(){
         $comics = new ComicController();
         $contenidos = $comics->show();
@@ -28,6 +33,11 @@ class ViewsController extends Controller
         return view('categories', ['contenidos' => $contenidos, 'titulo' => $titulo]);
     }
 
+    /**
+     * used to show the about personajes page
+     *
+     * @return View
+     */
     public function personajes(){
         $personajes = new PersonajeController();
         $contenidos = $personajes->show();
@@ -35,10 +45,20 @@ class ViewsController extends Controller
         return view('categories', ['contenidos' => $contenidos, 'titulo' => $titulo]);
     }
 
+    /**
+     * used to show the login page
+     *
+     * @return View
+     */
     public function login(){
         return view('login');
     }
 
+    /**
+     * used to show the register page
+     *
+     * @return View
+     */
     public function signup(){
         return view('signup');
     }

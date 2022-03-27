@@ -39,7 +39,7 @@
             <div class="row">
                 <div class="col-lg-2">
                     <div class="header__logo">
-                        <a href="./index.html">
+                        <a href="{{route('index')}}">
                             <img src="img/logo2.png" alt="">
                         </a>
                     </div>
@@ -49,9 +49,9 @@
                         <nav class="header__menu mobile-menu">
                             <ul>
                                 <li class="active"><a href="{{route('index')}}">Homepage</a></li>
-                                <li><a href="{{route('comics')}}">Categories <span class="arrow_carrot-down"></span></a>
+                                <li><a href="{{route('comics')}}">Comics <span class="arrow_carrot-down"></span></a>
                                     <ul class="dropdown">
-                                        <li><a href="{{route('comics')}}">Categories</a></li>
+                                        <li><a href="{{route('comics')}}">Comics</a></li>
                                         <li><a href="{{route('personajes')}}">Personajes</a></li>
                                         <li><a href="{{route('signup')}}">Sign Up</a></li>
                                         <li><a href="{{route('login')}}">Login</a></li>
@@ -64,7 +64,7 @@
                 <div class="col-lg-2">
                     <div class="header__right">
                         <a href="#" class="search-switch"><span class="icon_search"></span></a>
-                        <a href="./login.html"><span class="icon_profile"></span></a>
+                        <a href="{{route('login')}}"><span class="icon_profile"></span></a>
                     </div>
                 </div>
             </div>
@@ -86,15 +86,16 @@
         <div class="row">
             <div class="col-lg-3">
                 <div class="footer__logo">
-                    <a href="./index.html"><img src="img/logo2.png" alt=""></a>
+                    <a href="{{route('index')}}"><img src="img/logo2.png" alt=""></a>
                 </div>
             </div>
             <div class="col-lg-6">
                 <div class="footer__nav">
                     <ul>
-                        <li class="active"><a href="./index.html">Homepage</a></li>
-                        <li><a href="./categories.html">Categories</a></li>
-                        <li><a href="./blog.html">Our Blog</a></li>
+                        <li class="active"><a href="{{route('index')}}">Homepage</a></li>
+                        <li><a href="{{route('comics')}}">Comics</a></li>
+                        <li><a href="{{route('personajes')}}">Personajes</a></li>
+                        <li><a href="#">Our Blog</a></li>
                         <li><a href="#">Contacts</a></li>
                     </ul>
                 </div>

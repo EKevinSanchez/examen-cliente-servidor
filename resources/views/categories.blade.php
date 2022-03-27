@@ -40,7 +40,7 @@
                                     <div class="product__item__pic set-bg" data-setbg="{{$contenido->imagen}}">
                                     </div>
                                     <div class="product__item__text">
-                                        <h5><a href="#">{{$contenido->nombre}}</a></h5>
+                                        <h5><a href="{{route('details', $contenido->id)}}">{{$contenido->nombre}}</a></h5>
                                     </div>
                                 </div>
                             </div>
