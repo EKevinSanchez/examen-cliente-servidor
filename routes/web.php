@@ -64,7 +64,32 @@ Route::get('/login', [ViewsController::class, 'login'])->name('login');
 */
 Route::get('/signup', [ViewsController::class, 'signup'])->name('signup');
 
-
+/*
+|--------------------------------------------------------------------------
+| Route /detalle-comic
+|--------------------------------------------------------------------------
+|
+| This route is used to show the detail comic page
+|
+*/
 Route::get('/detalle-comic/{id}', [ViewsController::class, 'detalleComic'])->name('detalleComic');
 
+/*
+|--------------------------------------------------------------------------
+| Route /detalle-personaje
+|--------------------------------------------------------------------------
+|
+| This route is used to show the detail personaje page
+|
+*/
 Route::get('/detalle-personaje/{id}', [ViewsController::class, 'detallePersonaje'])->name('detallePersonaje');
+
+/*
+|--------------------------------------------------------------------------
+| Route /login
+|--------------------------------------------------------------------------
+|
+| This route in method post is used to login the user
+|
+*/
+Route::post('/login', [ViewsController::class, 'login'])->name('login');
