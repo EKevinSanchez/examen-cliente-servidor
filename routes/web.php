@@ -93,6 +93,6 @@ Route::get('/detalle-personaje/{id}', [ViewsController::class, 'detallePersonaje
 | This route in method post is used to login the user
 |
 */
-Route::post('/login', [UserController::class, 'login'])->name('login');
+Route::post('/loginer', [UserController::class, 'login'])->name('loginer');
 Route::post('/signup', [UserController::class, 'create'])->name('signup');
 Route::get('/logout', [UserController::class, 'logout'])->name('logout');

@@ -12,7 +12,7 @@ class UserController extends Controller
         $user = new User();
         $user->name = $request->name;
         $user->email = $request->email;
-        $user->password = bcrypt($request->password);
+        $user->password = $request->password;
         $user->save();
         Auth::login($user);
         return redirect('/');
@@ -20,16 +20,11 @@ class UserController extends Controller
     }
 
     public function login(Request $request){
-        $user = User::where('email', $request->email)->first();
-        if($user){
-            //verificar password
-            if(password_verify($request->password, $user->password)){
-                Auth::login($user);
-                return redirect('/');
-            }
-            
+        if(Auth::attempt(['email' => $request->email, 'password' => $request->password])){
+            return redirect('/');
+        }else{
+            return back()->withErrors(['message' => 'Email o contraseña incorrectos']);
         }
-        return redirect('/login');
     }
 
     public function logout(){

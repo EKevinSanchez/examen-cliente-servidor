@@ -22,14 +22,14 @@
                 <div class="col-lg-6">
                     <div class="login__form">
                         <h3>Login</h3>
-                        <form action="{{route('login')}}" method="POST">
+                        <form action="{{route('loginer')}}" method="POST">
                             @csrf
                             <div class="input__item">
-                                <input type="text" placeholder="Email address">
+                                <input type="text" placeholder="Email address" name="email">
                                 <span class="icon_mail"></span>
                             </div>
                             <div class="input__item">
-                                <input type="password" placeholder="Password">
+                                <input type="password" placeholder="Password" name="password">
                                 <span class="icon_lock"></span>
                             </div>
                             <button type="submit" class="site-btn">Login Now</button>
@@ -62,5 +62,10 @@
             </div>
         </div>
     </section>
+    @error('message')
+        <script>
+            alert('{{$message}}');
+        </script>
+    @enderror
     <!-- Login Section End -->
 @endsection
