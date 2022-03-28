@@ -35,7 +35,7 @@
                             <div class="hero__text">
                                 <h2>Conoce las peliculas</h2>
                                 <p>Donde aparecen algunos de los integrantes del equipo</p>
-                                <a href="#"><span>Conocer mas</span> <i class="fa fa-angle-right"></i></a>
+                                <a href="{{route('movie')}}"><span>Conocer mas</span> <i class="fa fa-angle-right"></i></a>
                             </div>
                         </div>
                     </div>

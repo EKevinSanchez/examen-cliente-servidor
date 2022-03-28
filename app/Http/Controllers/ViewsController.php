@@ -96,4 +96,19 @@ class ViewsController extends Controller
 
         return view('anime-details',['datos' => $personaje, 'titulo' => $titulo]);
     }
+
+    /**
+     * used to show all movies in a page
+     *
+     * @return View
+     */
+    public function movies(){
+        $movies = new ApiController();
+        $xmen = $movies->GetXmen();
+        $dead = $movies->GetDeadpool();
+        $titulo = "Películas";
+        $date = date('Y-m-d');
+
+        return view('blog-details', ['xmen' => $xmen, 'titulo' => $titulo, 'deadpool' =>$dead, 'date' => $date]);
+    }
 }

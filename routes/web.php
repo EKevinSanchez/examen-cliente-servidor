@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ApiController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ViewsController;
 use Illuminate\Support\Facades\Route;
@@ -96,3 +97,5 @@ Route::get('/detalle-personaje/{id}', [ViewsController::class, 'detallePersonaje
 Route::post('/loginer', [UserController::class, 'login'])->name('loginer');
 Route::post('/signup', [UserController::class, 'create'])->name('signup');
 Route::get('/logout', [UserController::class, 'logout'])->name('logout');
+
+Route::get('/movie', [ViewsController::class, 'movies'])->name('movie');
