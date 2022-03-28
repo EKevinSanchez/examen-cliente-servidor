@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ViewsController extends Controller
 {
@@ -51,7 +52,7 @@ class ViewsController extends Controller
      * @return View
      */
     public function login(){
-        return view('login');
+        return view('auth.login');
     }
 
     /**
@@ -60,9 +61,20 @@ class ViewsController extends Controller
      * @return View
      */
     public function signup(){
-        return view('signup');
+        //comprobar si ya esta autenticado
+        if(Auth::check()){
+            return redirect('/');
+        }
+        return view('auth.signup');
     }
 
+    /**
+     * used to show the detail of a comic page
+     *
+     * @param int $id
+     * 
+     * @return View
+     */
     public function detalleComic($id){
         $comics = new ComicController();
         $comic = $comics->showOne($id);
@@ -71,6 +83,12 @@ class ViewsController extends Controller
         return view('anime-details',['datos' => $comic, 'titulo' => $titulo]);
     }
 
+    /**
+     * used to show the detail of a personaje page
+     *
+     * @param int $id
+     * @return View
+     */
     public function detallePersonaje($id){
         $personajes = new PersonajeController();
         $personaje = $personajes->showOne($id);

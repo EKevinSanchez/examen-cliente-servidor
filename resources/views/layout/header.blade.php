@@ -65,6 +65,14 @@
                     <div class="header__right">
                         <a href="#" class="search-switch"><span class="icon_search"></span></a>
                         <a href="{{route('login')}}"><span class="icon_profile"></span></a>
+                        @if (Route::has('login'))
+                            @auth
+                                <a href="{{ route('logout') }}">
+                                log out
+                                </a>
+                            @endauth
+                            
+                        @endif
                     </div>
                 </div>
             </div>

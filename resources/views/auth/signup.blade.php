@@ -23,17 +23,18 @@
                 <div class="col-lg-6">
                     <div class="login__form">
                         <h3>Sign Up</h3>
-                        <form action="#">
+                        <form action="{{route('signup')}}" method="POST">
+                            @csrf
                             <div class="input__item">
-                                <input type="text" placeholder="Email address">
+                                <input type="text" placeholder="Email address" name="email">
                                 <span class="icon_mail"></span>
                             </div>
                             <div class="input__item">
-                                <input type="text" placeholder="Your Name">
+                                <input type="text" placeholder="Your Name" name="name">
                                 <span class="icon_profile"></span>
                             </div>
                             <div class="input__item">
-                                <input type="text" placeholder="Password">
+                                <input type="password" placeholder="Password" name="password">
                                 <span class="icon_lock"></span>
                             </div>
                             <button type="submit" class="site-btn">Login Now</button>
