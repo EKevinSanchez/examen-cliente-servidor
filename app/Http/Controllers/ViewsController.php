@@ -103,12 +103,16 @@ class ViewsController extends Controller
      * @return View
      */
     public function movies(){
-        $movies = new ApiController();
+
+        if(Auth::check()){
+            $movies = new ApiController();
         $xmen = $movies->GetXmen();
         $dead = $movies->GetDeadpool();
         $titulo = "Películas";
         $date = date('Y-m-d');
-
         return view('blog-details', ['xmen' => $xmen, 'titulo' => $titulo, 'deadpool' =>$dead, 'date' => $date]);
+        }else{
+            return redirect('/login')->withErrors(['message' => 'Necesitas iniciar sesión para ver esta página']);
+        }
     }
 }

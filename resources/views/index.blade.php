@@ -73,7 +73,7 @@
                                             <ul>
                                                 <li>{{$personaje->bando}}</li>
                                             </ul>
-                                            <h5><a href="{{route('detallePersonaje', $personaje->id)}}">{{$personaje->nombre}}</a></h5>
+                                            <h5><a href="{{route('detallePersonaje', $personaje->id)}}" >{{$personaje->nombre}}</a></h5>
                                         </div>
                                     </div>
                                 </div>

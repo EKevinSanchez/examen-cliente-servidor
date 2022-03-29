@@ -49,10 +49,11 @@
                         <nav class="header__menu mobile-menu">
                             <ul>
                                 <li class="active"><a href="{{route('index')}}">Homepage</a></li>
-                                <li><a href="{{route('comics')}}">Comics <span class="arrow_carrot-down"></span></a>
+                                <li class="encabezado">Categorias <span class="arrow_carrot-down"></span>
                                     <ul class="dropdown">
                                         <li><a href="{{route('comics')}}">Comics</a></li>
                                         <li><a href="{{route('personajes')}}">Personajes</a></li>
+                                        <li><a href="{{route('movie')}}">Peliculas</a></li>
                                         <li><a href="{{route('signup')}}">Sign Up</a></li>
                                         <li><a href="{{route('login')}}">Login</a></li>
                                     </ul>

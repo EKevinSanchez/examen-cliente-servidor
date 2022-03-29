@@ -39,18 +39,7 @@
                             </div>
                             <button type="submit" class="site-btn">Login Now</button>
                         </form>
-                        <h5>Already have an account? <a href="#">Log In!</a></h5>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="login__social__links">
-                        <h3>Login With:</h3>
-                        <ul>
-                            <li><a href="#" class="facebook"><i class="fa fa-facebook"></i> Sign in With Facebook</a>
-                            </li>
-                            <li><a href="#" class="google"><i class="fa fa-google"></i> Sign in With Google</a></li>
-                            <li><a href="#" class="twitter"><i class="fa fa-twitter"></i> Sign in With Twitter</a></li>
-                        </ul>
+                        <h5>Already have an account? <a href="{{route('login')}}">Log In!</a></h5>
                     </div>
                 </div>
             </div>
