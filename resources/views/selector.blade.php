@@ -21,32 +21,41 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="product__page__content">
+                    <form action="{{route('users.updateAvartar')}}" method="post">
                         <div class="product__page__title">
+                            @csrf
                             <div class="row">
                                 <div class="col-lg-12 col-md-12 col-sm-6">
                                     <div class="section-title">
                                         <h4>Seleccione un avatar</h4>
+                                        <input type="submit" value="Guardar" class="btn-go right">
+
+                                        <input type="hidden" name="user_id" value="@auth {{Auth::user()->id}} @endauth">
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             @foreach ($contenidos as $contenido)
-                            <div class="col-lg-4 col-md-6 col-sm-6">
-                                <div class="product__item">
-                                    <a href="">
-                                        <div class="product__item__pic set-bg" data-setbg="{{$contenido->imagen}}">
-                                        </div>
-                                    </a>
+                                <div class="col-lg-4 col-md-6 col-sm-6">
+                                    <input type="radio" name="avatar" id="{{$contenido->id}}" value="{{$contenido->imagen}}" require>
+                                    <label for="{{$contenido->id}}">
+                                        <img src="{{$contenido->imagen}}" alt="" class="avatar">
+                                    </label>
                                 </div>
-                            </div>
                             @endforeach
                         </div>
+                        </form>
                     </div>
                 </div>
                 
 </div>
 </div>
+@error('message')
+        <script>
+            alert('{{$message}}');
+        </script>
+@enderror
 </section>
 <!-- Product Section End -->
 @endsection

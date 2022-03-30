@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ApiController;
+use App\Http\Controllers\PerfilController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ViewsController;
 use Illuminate\Support\Facades\Route;
@@ -100,6 +101,8 @@ Route::get('/logout', [UserController::class, 'logout'])->name('logout');
 
 Route::get('/movie', [ViewsController::class, 'movies'])->name('movie');
 
-Route::get('/profile', [ViewsController::class, 'blog'])->name('profile');
+Route::get('/profile', [ViewsController::class, 'profile'])->name('profile');
 
 Route::get('/selector', [ViewsController::class, 'selector'])->name('selector');
+
+Route::post('/selector', [PerfilController::class, 'update'])->name('users.updateAvartar');

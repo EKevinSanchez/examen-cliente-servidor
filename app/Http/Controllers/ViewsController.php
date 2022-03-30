@@ -116,7 +116,7 @@ class ViewsController extends Controller
         }
     }
 
-    public function blog(){
+    public function profile(){
         if(Auth::check()){
             $user = Auth::user()->name;
             return view('blog', ['user' => $user]);
