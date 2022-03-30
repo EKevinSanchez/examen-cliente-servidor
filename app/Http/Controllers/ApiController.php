@@ -54,4 +54,12 @@ class ApiController extends Controller
         }
         return $movies;
     }
+
+    public function hola(){
+        //lamar lafuncion GetXmen
+        $xem = $this->GetXmen();
+
+        //retornar la vista
+        return view('hola', ['xmen' => $xem]);
+    }
 }

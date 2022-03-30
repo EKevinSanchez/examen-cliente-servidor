@@ -44,7 +44,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-lg-8">
+                <div class="col-lg-6">
                     <div class="header__nav">
                         <nav class="header__menu mobile-menu">
                             <ul>
@@ -62,17 +62,14 @@
                         </nav>
                     </div>
                 </div>
-                <div class="col-lg-2">
+                <div class="col-lg-4">
                     <div class="header__right">
                         <a href="#" class="search-switch"><span class="icon_search"></span></a>
+                        @if (Auth::check())
+                        <a href="{{route('profile')}}"><img src="img/hero/deadpool.jpg" alt="" class="proc-h"></a>
+                        <a href="{{route('logout')}}" class="primary-btn">Logout</a>
+                        @else
                         <a href="{{route('login')}}"><span class="icon_profile"></span></a>
-                        @if (Route::has('login'))
-                            @auth
-                                <a href="{{ route('logout') }}">
-                                log out
-                                </a>
-                            @endauth
-                            
                         @endif
                     </div>
                 </div>

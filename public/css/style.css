@@ -325,6 +325,13 @@ ol {
 /*---------------------
   Header
 -----------------------*/
+.proc-h{
+	
+	width: 40px;
+    height: 40px;
+    border-radius: 50%;
+	
+}
 
 .header {
 	background: #070720;
@@ -1364,7 +1371,46 @@ ol {
 /*---------------------
     Blog
 -----------------------*/
+.btn-fa{
+	font-size: 20px;
+	display: inline-block;
+	background: #e53637;
+	padding: 11px 5px 16px 8px;
+	color: #ffffff;
+	border-radius: 0 4px 4px 0;
+}
+.btn-go{
+	font-size: 13px;
+	color: #ffffff;
+	background: #e53637;
+	display: inline-block;
+	font-weight: 700;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	padding: 14px 20px;
+	border-radius: 4px 0 0 4px;
+	margin-right: 1px;
+}
+.title{
+	text-align: center;
+	font-size: 40px;
+	font-weight: 700;
+	color: #ffffff;
+	margin-bottom: 30px;
+}
 
+.subtitle{
+	font-size: 30px;
+	font-weight: 700;
+	color: #fff;
+	margin-bottom: 30px;
+}
+.proc{
+	vertical-align: middle;
+	width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
 .blog {
 	padding-top: 70px;
 	padding-bottom: 90px;

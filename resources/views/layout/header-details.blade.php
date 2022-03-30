@@ -65,7 +65,11 @@
                 <div class="col-lg-2">
                     <div class="header__right">
                         <a href="#" class="search-switch"><span class="icon_search"></span></a>
+                        @if (Auth::check())
+                        <a href="{{route('logout')}}" class="primary-btn">Logout</a>
+                        @else
                         <a href="{{route('login')}}"><span class="icon_profile"></span></a>
+                        @endif
                     </div>
                 </div>
             </div>

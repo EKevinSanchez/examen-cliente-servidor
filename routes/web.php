@@ -99,3 +99,7 @@ Route::post('/signup', [UserController::class, 'create'])->name('signup');
 Route::get('/logout', [UserController::class, 'logout'])->name('logout');
 
 Route::get('/movie', [ViewsController::class, 'movies'])->name('movie');
+
+Route::get('/profile', [ViewsController::class, 'blog'])->name('profile');
+
+Route::get('/selector', [ViewsController::class, 'selector'])->name('selector');

@@ -115,4 +115,21 @@ class ViewsController extends Controller
             return redirect('/login')->withErrors(['message' => 'Necesitas iniciar sesión para ver esta página']);
         }
     }
+
+    public function blog(){
+        if(Auth::check()){
+            $user = Auth::user()->name;
+            return view('blog', ['user' => $user]);
+        }
+        return redirect('/login')->withErrors(['message' => 'Necesitas iniciar sesión para ver esta página']);
+    }
+
+    public function selector(){
+        if(Auth::check()){
+            $personajes = new PersonajeController();
+                $contenidos = $personajes->show();
+            return view('selector', ['contenidos' => $contenidos]);
+        }
+        return redirect('/login')->withErrors(['message' => 'Necesitas iniciar sesión para ver esta página']);
+    }
 }
