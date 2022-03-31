@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Auth;
 class PerfilController extends Controller
 {
     /**
-     * Seleccionar la imagen de perfil por primera vez
+     * Cambiar el avatar de un usuario
      *
      * @param Request $request
      * 
@@ -38,7 +38,7 @@ class PerfilController extends Controller
     }
 
     /**
-     * Usada para cambiar el avatar del perfil
+     * Seleccionar la imagen de perfil por primera vez
      *
      * @param Request $request
      * 
