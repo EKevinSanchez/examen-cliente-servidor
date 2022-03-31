@@ -158,4 +158,18 @@ class ViewsController extends Controller
         }
         return redirect('/login')->withErrors(['message' => 'Necesitas iniciar sesión para ver esta página']);
     }
+
+    /**
+     * used to show the page to change the profile's avatar
+     *
+     * @return View
+     */
+    public function newAvatar(){
+        if(Auth::check()){
+            $personajes = new PersonajeController();
+                $contenidos = $personajes->show();
+            return view('new-avatar', ['contenidos' => $contenidos]);
+        }
+        return redirect('/login')->withErrors(['message' => 'Necesitas iniciar sesión para ver esta página']);
+    }
 }

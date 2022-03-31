@@ -38,9 +38,14 @@
 use Illuminate\Support\Facades\Auth;
 
         if(Auth::check()){
-            $user = Auth::user();
-            $perfil = new PerfilController();
-            $avatar = $perfil->show($user->id);
+            //si fue redireccionado por el signup
+            if(isset($_GET['signup'])){
+                $avatar = null;
+            }else{
+                $user = Auth::user();
+                $perfil = new PerfilController();
+                $avatar = $perfil->show($user->id);
+            }
         }
     ?>
 
@@ -78,7 +83,12 @@ use Illuminate\Support\Facades\Auth;
                     <div class="header__right">
                         <a href="#" class="search-switch"><span class="icon_search"></span></a>
                         @if (Auth::check())
-                        <a href="{{route('profile')}}"><img src="{{$avatar->avatar}}" alt="" class="proc-h"></a>
+                            @if ($avatar == null)
+                            <a href="{{route('login')}}"><span class="icon_profile"></span></a>
+                                @else
+                                <a href="{{route('profile')}}"><img src="{{$avatar->avatar}}" alt="" class="proc-h"></a>
+                            @endif
+                        
                         <a href="{{route('logout')}}" class="primary-btn">Logout</a>
                         @else
                         <a href="{{route('login')}}"><span class="icon_profile"></span></a>

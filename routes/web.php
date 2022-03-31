@@ -166,4 +166,32 @@ Route::post('/selector', [PerfilController::class, 'update'])->name('users.updat
 */
 Route::get('/update', [ViewsController::class, 'updateName'])->name('users.updateName');
 
+/*
+|--------------------------------------------------------------------------
+| Route /update
+|--------------------------------------------------------------------------
+|
+| This route in method post is used to update the name of the user
+|
+*/
 Route::post('/update', [UserController::class, 'updateName'])->name('users.updateName');
+
+/*
+|--------------------------------------------------------------------------
+| Route /new-avatar
+|--------------------------------------------------------------------------
+|
+| This route in method get is used to show the papge of select new avatar
+|
+*/
+Route::get('/new-avatar', [ViewsController::class, 'newAvatar'])->name('users.newAvatar');
+
+/*
+|--------------------------------------------------------------------------
+| Route /new-avatar
+|--------------------------------------------------------------------------
+|
+| This route in method post is used to assign a new avatar to the user
+|
+*/
+Route::post('/new-avatar', [PerfilController::class, 'create'])->name('users.newAvatar');
