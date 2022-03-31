@@ -6,7 +6,7 @@
 
 ### - link de la pagina: https://examen-cliente.herokuapp.com/
 
-### - link del video
+### - link del video: https://youtu.be/1LrVmMiCQaE
 
 ## Idea principal de la pagina 
 
