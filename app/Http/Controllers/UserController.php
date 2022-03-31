@@ -51,6 +51,13 @@ class UserController extends Controller
         return redirect('/');
     }
 
+    /**
+     * used to change the user's name
+     * 
+     * @param Request $request
+     * 
+     * @return View
+     */
     public function updateName(Request $request){
         $user = User::find(Auth::user()->id);
         $user->name = $request->name;
