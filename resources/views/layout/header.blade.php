@@ -32,6 +32,18 @@
     </div>
 
     <!-- Header Section Begin -->
+    <?php
+
+    use App\Http\Controllers\PerfilController;
+use Illuminate\Support\Facades\Auth;
+
+        if(Auth::check()){
+            $user = Auth::user();
+            $perfil = new PerfilController();
+            $avatar = $perfil->show($user->id);
+        }
+    ?>
+
 
 
     <header class="header">
@@ -66,7 +78,7 @@
                     <div class="header__right">
                         <a href="#" class="search-switch"><span class="icon_search"></span></a>
                         @if (Auth::check())
-                        <a href="{{route('profile')}}"><img src="img/hero/deadpool.jpg" alt="" class="proc-h"></a>
+                        <a href="{{route('profile')}}"><img src="{{$avatar->avatar}}" alt="" class="proc-h"></a>
                         <a href="{{route('logout')}}" class="primary-btn">Logout</a>
                         @else
                         <a href="{{route('login')}}"><span class="icon_profile"></span></a>

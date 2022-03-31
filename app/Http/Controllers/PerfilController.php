@@ -12,10 +12,10 @@ use Illuminate\Support\Facades\Auth;
 class PerfilController extends Controller
 {
     public function update(Request $request){
-        $avatar = new perfil();
-        $avatar->user_id = $request->user_id;
-        $avatar->avatar = $request->avatar;
-        $avatar->save();
+        $perfil = perfil::where('user_id', Auth::user()->id)->first();
+        $perfil->user_id = $request->user_id;
+        $perfil->avatar = $request->avatar;
+        $perfil->save();
         return redirect('/profile');
         
     }
@@ -23,10 +23,10 @@ class PerfilController extends Controller
     /** 
     * mostrar el avatar del perfil
     *
-    * @return View
+    * @return Array
     */ 
     public function show($id){
-        $avatar = perfil::all();
+        $avatar = perfil::where('user_id', $id)->first();
         return ($avatar);
     }
 }

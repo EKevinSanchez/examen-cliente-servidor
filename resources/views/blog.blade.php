@@ -7,7 +7,7 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <div class="normal__breadcrumb__text">
-                        <img src="img/hero/deadpool.jpg" alt="" class="proc">
+                        <img src="{{$avatar->avatar}}" alt="" class="proc">
                         <h2>Perfil</h2>
                         <p>Bienvenido de vuelta {{$user}}</p>
                     </div>
@@ -30,10 +30,10 @@
                         </div>
                         <div class="col-lg-6">
                             <h4 class="subtitle">Cambiar Nombre de perfil</h4>
-                            <a href="#"><span class="btn-go">Ir</span> <i class="fa fa-angle-right btn-fa"></i></a>
+                            <a href="/update"><span class="btn-go">Ir</span> <i class="fa fa-angle-right btn-fa"></i></a>
                         </div>
                     </div>
-                </div>
+                </div>  
                 
             </div>
         </div>

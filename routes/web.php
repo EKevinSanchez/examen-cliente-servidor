@@ -96,13 +96,74 @@ Route::get('/detalle-personaje/{id}', [ViewsController::class, 'detallePersonaje
 |
 */
 Route::post('/loginer', [UserController::class, 'login'])->name('loginer');
+
+/*
+|--------------------------------------------------------------------------
+| Route /signup
+|--------------------------------------------------------------------------
+|
+| This route in method post is used to register the user
+|
+*/
 Route::post('/signup', [UserController::class, 'create'])->name('signup');
+
+/*
+|--------------------------------------------------------------------------
+| Route /logout
+|--------------------------------------------------------------------------
+|
+| This route in method get is used to logout the user
+|
+*/
 Route::get('/logout', [UserController::class, 'logout'])->name('logout');
 
+/*
+|--------------------------------------------------------------------------
+| Route /movie
+|--------------------------------------------------------------------------
+|
+| This route in method get is used to show the movie page
+|
+*/
 Route::get('/movie', [ViewsController::class, 'movies'])->name('movie');
 
+/*
+|--------------------------------------------------------------------------
+| Route /profile
+|--------------------------------------------------------------------------
+|
+| This route in method get is used to show the profile page
+*/
 Route::get('/profile', [ViewsController::class, 'profile'])->name('profile');
 
+/*
+|--------------------------------------------------------------------------
+| Route /selector
+|--------------------------------------------------------------------------
+|
+| This route in method get is used to show the selector of avatar page
+|
+*/
 Route::get('/selector', [ViewsController::class, 'selector'])->name('selector');
 
+/*
+|--------------------------------------------------------------------------
+| Route /selector
+|--------------------------------------------------------------------------
+|
+| This route in method post is used to change the avatar of the user
+|
+*/
 Route::post('/selector', [PerfilController::class, 'update'])->name('users.updateAvartar');
+
+/*
+|--------------------------------------------------------------------------
+| Route /update
+|--------------------------------------------------------------------------
+|
+| This route in method get is used to show the update page
+|
+*/
+Route::get('/update', [ViewsController::class, 'updateName'])->name('users.updateName');
+
+Route::post('/update', [UserController::class, 'updateName'])->name('users.updateName');

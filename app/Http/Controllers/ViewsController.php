@@ -116,16 +116,27 @@ class ViewsController extends Controller
         }
     }
 
+    /**
+     * used to show the profile page
+     *
+     * @return View
+     */
     public function profile(){
         if(Auth::check()){
-            $user = Auth::user()->name;
-            $avatar = new PerfilController();
-            $contenidos = $avatar->show(Auth::user()->id);
-            return view('blog', ['user' => $user, 'avatar'=>$contenidos]);
+            $user = Auth::user();
+            $nombre = $user->name;
+            $perfil = new PerfilController();
+            $avatar = $perfil->show($user->id);
+            return view('blog', ['user' => $nombre, 'avatar'=>$avatar]);
         }
         return redirect('/login')->withErrors(['message' => 'Necesitas iniciar sesión para ver esta página']);
     }
 
+    /**
+     * used to show the selector of avatar page
+     *
+     * @return View
+     */
     public function selector(){
         if(Auth::check()){
             $personajes = new PersonajeController();
@@ -135,5 +146,16 @@ class ViewsController extends Controller
         return redirect('/login')->withErrors(['message' => 'Necesitas iniciar sesión para ver esta página']);
     }
 
+    /**
+     * used to show the page to change the profile's name
+     *
+     * @return View
+     */
+    public function updateName(){
+        if(Auth::check()){
 
+            return view('update-name');
+        }
+        return redirect('/login')->withErrors(['message' => 'Necesitas iniciar sesión para ver esta página']);
+    }
 }
