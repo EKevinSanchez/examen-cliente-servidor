@@ -38,7 +38,7 @@ class PerfilController extends Controller
     }
 
     /**
-     * Seleccionar la imagen de perfil por primera vez
+     * Usada para cambiar el avatar del perfil
      *
      * @param Request $request
      * 
