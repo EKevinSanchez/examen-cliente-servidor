@@ -21,9 +21,9 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="product__page__content">
-                    <form action="{{route('users.updateAvartar')}}" method="post">
+                    <form action="/selector" method="post">
+                    @csrf
                         <div class="product__page__title">
-                            @csrf
                             <div class="row">
                                 <div class="col-lg-12 col-md-12 col-sm-6">
                                     <div class="section-title">
@@ -38,7 +38,7 @@
                         <div class="row">
                             @foreach ($contenidos as $contenido)
                                 <div class="col-lg-4 col-md-6 col-sm-6">
-                                    <input type="radio" name="avatar" id="{{$contenido->id}}" value="{{$contenido->imagen}}" require>
+                                    <input type="radio" name="avatar" id="{{$contenido->id}}" value="{{$contenido->imagen}}">
                                     <label for="{{$contenido->id}}">
                                         <img src="{{$contenido->imagen}}" alt="" class="avatar">
                                     </label>

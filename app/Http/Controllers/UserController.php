@@ -15,7 +15,7 @@ class UserController extends Controller
         $user->password = $request->password;
         $user->save();
         Auth::login($user);
-        return redirect('/');
+        return redirect('/selector');
 
     }
 

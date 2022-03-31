@@ -119,7 +119,9 @@ class ViewsController extends Controller
     public function profile(){
         if(Auth::check()){
             $user = Auth::user()->name;
-            return view('blog', ['user' => $user]);
+            $avatar = new PerfilController();
+            $contenidos = $avatar->show(Auth::user()->id);
+            return view('blog', ['user' => $user, 'avatar'=>$contenidos]);
         }
         return redirect('/login')->withErrors(['message' => 'Necesitas iniciar sesión para ver esta página']);
     }
@@ -132,4 +134,6 @@ class ViewsController extends Controller
         }
         return redirect('/login')->withErrors(['message' => 'Necesitas iniciar sesión para ver esta página']);
     }
+
+
 }

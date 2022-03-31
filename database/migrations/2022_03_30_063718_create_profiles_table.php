@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('profiles', function (Blueprint $table) {
             $table->id();
             $table->integer('user_id')->references('id')->on('users')->onDelete('cascade');
-            $table->string('avatar')->nullable()->references('imagen')->on('personajes')->onDelete('cascade');
+            $table->string('avatar')->references('imagen')->on('personajes')->onDelete('cascade');
             $table->timestamps();
         });
     }

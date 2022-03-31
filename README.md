@@ -1,4 +1,9 @@
 # examen-cliente-servidor
 
-## link de la pagina subida: https://examen-cliente.herokuapp.com/
+grupo
 
+nombre completo
+
+## link de la pagina: https://examen-cliente.herokuapp.com/
+
+link del video
