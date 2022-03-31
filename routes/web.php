@@ -89,7 +89,7 @@ Route::get('/detalle-personaje/{id}', [ViewsController::class, 'detallePersonaje
 
 /*
 |--------------------------------------------------------------------------
-| Route /login
+| Route /loginer
 |--------------------------------------------------------------------------
 |
 | This route in method post is used to login the user
