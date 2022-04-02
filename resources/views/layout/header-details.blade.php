@@ -39,7 +39,7 @@
             <div class="row">
                 <div class="col-lg-2">
                     <div class="header__logo">
-                        <a href="/index">
+                        <a href="/">
                             <img src="../img/logo2.png" alt="">
                         </a>
                     </div>
@@ -91,13 +91,13 @@
         <div class="row">
             <div class="col-lg-3">
                 <div class="footer__logo">
-                    <a href="/index"><img src="../img/logo2.png" alt=""></a>
+                    <a href="/"><img src="../img/logo2.png" alt=""></a>
                 </div>
             </div>
             <div class="col-lg-6">
                 <div class="footer__nav">
                     <ul>
-                        <li class="active"><a href="/index">Homepage</a></li>
+                        <li class="active"><a href="/">Homepage</a></li>
                         <li><a href="/comics">Comics</a></li>
                         <li><a href="/personajes">Personajes</a></li>
                     </ul>
