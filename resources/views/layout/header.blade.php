@@ -65,7 +65,7 @@ use Illuminate\Support\Facades\Auth;
                     <div class="header__nav">
                         <nav class="header__menu mobile-menu">
                             <ul>
-                                <li class="active"><a href="/index">Homepage</a></li>
+                                <li class="active"><a href="/">Homepage</a></li>
                                 <li class="encabezado">Categorias <span class="arrow_carrot-down"></span>
                                     <ul class="dropdown">
                                         <li><a href="/comics">Comics</a></li>
