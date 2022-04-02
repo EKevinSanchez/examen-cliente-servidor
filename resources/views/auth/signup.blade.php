@@ -37,7 +37,7 @@
                                 <input type="password" placeholder="Password" name="password">
                                 <span class="icon_lock"></span>
                             </div>
-                            <button type="submit" class="site-btn">Login Now</button>
+                            <button type="submit" class="site-btn">Register Now</button>
                         </form>
                         <h5>Already have an account? <a href="{{route('login')}}">Log In!</a></h5>
                     </div>
