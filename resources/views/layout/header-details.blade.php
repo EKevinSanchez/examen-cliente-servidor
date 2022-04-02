@@ -39,7 +39,7 @@
             <div class="row">
                 <div class="col-lg-2">
                     <div class="header__logo">
-                        <a href="{{route('index')}}">
+                        <a href="/index">
                             <img src="../img/logo2.png" alt="">
                         </a>
                     </div>
@@ -48,14 +48,14 @@
                     <div class="header__nav">
                         <nav class="header__menu mobile-menu">
                             <ul>
-                                <li class="active"><a href="{{route('index')}}">Homepage</a></li>
+                                <li class="active"><a href="/">Homepage</a></li>
                                 <li class="encabezado">Categorias <span class="arrow_carrot-down"></span>
                                     <ul class="dropdown">
-                                        <li><a href="{{route('comics')}}">Comics</a></li>
-                                        <li><a href="{{route('personajes')}}">Personajes</a></li>
-                                        <li><a href="{{route('movie')}}">Peliculas</a></li>
-                                        <li><a href="{{route('signup')}}">Sign Up</a></li>
-                                        <li><a href="{{route('login')}}">Login</a></li>
+                                        <li><a href="/comics">Comics</a></li>
+                                        <li><a href="/personajes">Personajes</a></li>
+                                        <li><a href="/movie">Peliculas</a></li>
+                                        <li><a href="/signup">Sign Up</a></li>
+                                        <li><a href="/login">Login</a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -66,9 +66,9 @@
                     <div class="header__right">
                         <a href="#" class="search-switch"><span class="icon_search"></span></a>
                         @if (Auth::check())
-                        <a href="{{route('logout')}}" class="primary-btn">Logout</a>
+                        <a href="/logout" class="primary-btn">Logout</a>
                         @else
-                        <a href="{{route('login')}}"><span class="icon_profile"></span></a>
+                        <a href="/login"><span class="icon_profile"></span></a>
                         @endif
                     </div>
                 </div>
@@ -91,17 +91,15 @@
         <div class="row">
             <div class="col-lg-3">
                 <div class="footer__logo">
-                    <a href="{{route('index')}}"><img src="../img/logo2.png" alt=""></a>
+                    <a href="/index"><img src="../img/logo2.png" alt=""></a>
                 </div>
             </div>
             <div class="col-lg-6">
                 <div class="footer__nav">
                     <ul>
-                        <li class="active"><a href="{{route('index')}}">Homepage</a></li>
-                        <li><a href="{{route('comics')}}">Comics</a></li>
-                        <li><a href="{{route('personajes')}}">Personajes</a></li>
-                        <li><a href="#">Our Blog</a></li>
-                        <li><a href="#">Contacts</a></li>
+                        <li class="active"><a href="/index">Homepage</a></li>
+                        <li><a href="/comics">Comics</a></li>
+                        <li><a href="/personajes">Personajes</a></li>
                     </ul>
                 </div>
             </div>
