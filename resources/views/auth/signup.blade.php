@@ -23,7 +23,7 @@
                 <div class="col-lg-6">
                     <div class="login__form">
                         <h3>Sign Up</h3>
-                        <form action="{{route('signup')}}" method="POST">
+                        <form action="/signup" method="POST">
                             @csrf
                             <div class="input__item">
                                 <input type="text" placeholder="Email address" name="email">
