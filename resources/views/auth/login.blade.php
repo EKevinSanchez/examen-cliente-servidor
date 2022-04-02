@@ -22,7 +22,7 @@
                 <div class="col-lg-6">
                     <div class="login__form">
                         <h3>Login</h3>
-                        <form action="{{route('loginer')}}" method="POST">
+                        <form action="/loginer" method="POST">
                             @csrf
                             <div class="input__item">
                                 <input type="text" placeholder="Email address" name="email">
@@ -40,7 +40,7 @@
                 <div class="col-lg-6">
                     <div class="login__register">
                         <h3>Dont’t Have An Account?</h3>
-                        <a href="{{route('signup')}}" class="primary-btn">Register Now</a>
+                        <a href="/signup" class="primary-btn">Register Now</a>
                     </div>
                 </div>
             </div>
